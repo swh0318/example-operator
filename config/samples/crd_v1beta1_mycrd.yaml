@@ -3,4 +3,6 @@ kind: MyCRD
 metadata:
   name: mycrd-sample
 spec:
-  # TODO(user): Add fields here
+  # TODO(user):用户自定义逻辑
+  deploymentName: mycrd-sample-deployment
+  replicas: 1

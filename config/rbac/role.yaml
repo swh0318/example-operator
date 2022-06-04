@@ -1,0 +1,57 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - crd.github.com
+  resources:
+  - deployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - crd.github.com
+  resources:
+  - mycrds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - crd.github.com
+  resources:
+  - mycrds/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - crd.github.com
+  resources:
+  - mycrds/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - crd.github.com
+  resources:
+  - pods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
