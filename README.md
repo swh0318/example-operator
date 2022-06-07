@@ -1,2 +1,2 @@
 # sample-operator
-this is example-operator build with kubebuilder
+This is an sample operator created by using the kubebuilder
